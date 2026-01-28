@@ -1,10 +1,11 @@
 # ShopHub - Modern E-commerce Website
 
-A production-ready, modern e-commerce website built with Next.js 14+, Tailwind CSS, and Framer Motion. Perfect for small-to-medium businesses and D2C startups.
+A production-ready, modern e-commerce website built with Next.js 16+, Tailwind CSS, and Framer Motion. Perfect for small-to-medium businesses and D2C startups.
 
-![Built with Next.js](https://img.shields.io/badge/Next.js-14+-black)
+![Built with Next.js](https://img.shields.io/badge/Next.js-16+-black)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38bdf8)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Ready-3178c6)
+![Netlify Ready](https://img.shields.io/badge/Netlify-Ready-00C7B7)
 
 ## ✨ Features
 
@@ -49,16 +50,17 @@ A production-ready, modern e-commerce website built with Next.js 14+, Tailwind C
 - Environment variable support
 - Demo Stripe payment UI (ready for integration)
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
 - Node.js 18+ and npm
 
 ### Installation
 
-1. **Clone or navigate to the project:**
+1. **Clone the repository:**
    ```bash
-   cd ecommerce-site
+   git clone https://github.com/Naveenkm07/E-commerce-Store-Small-Medium.git
+   cd E-commerce-Store-Small-Medium
    ```
 
 2. **Install dependencies:**
@@ -73,6 +75,35 @@ A production-ready, modern e-commerce website built with Next.js 14+, Tailwind C
 
 4. **Open your browser:**
    Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🌐 Netlify Deployment
+
+### One-Click Deployment
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Naveenkm07/E-commerce-Store-Small-Medium)
+
+### Manual Deployment
+
+1. **Push to GitHub** (already done)
+
+2. **Connect to Netlify:**
+   - Go to [app.netlify.com](https://app.netlify.com)
+   - Click "Add new site" → "Import an existing project"
+   - Select your GitHub repository: `Naveenkm07/E-commerce-Store-Small-Medium`
+
+3. **Configure build settings:**
+   ```
+   Build command: npm run build
+   Publish directory: out
+   ```
+
+4. **Add environment variables** (if using Stripe):
+   - Go to Site settings → Environment variables
+   - Add `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
+
+5. **Deploy!** Netlify will automatically build and deploy your site
+
+### Important: Static Export Configuration
+This project is configured for static export to work perfectly with Netlify. The build process generates static HTML files in the `out` directory.
 
 ## 📂 Project Structure
 
@@ -136,39 +167,11 @@ The checkout includes a demo-ready Stripe integration stub. To activate live pay
 
 1. Create a Stripe account at [stripe.com](https://stripe.com)
 2. Get your publishable key from the Stripe dashboard
-3. Add to environment variables (create `.env.local`):
+3. Add to environment variables in Netlify:
    ```
    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_your_key_here
    ```
 4. Implement the Stripe Elements component in `src/components/checkout/StripePayment.tsx`
-
-## 🌐 Deployment
-
-### Netlify (Recommended)
-
-1. **Push to GitHub** (create a repository and push your code)
-
-2. **Connect to Netlify:**
-   - Go to [app.netlify.com](https://app.netlify.com)
-   - Click "Add new site" → "Import an existing project"
-   - Select your GitHub repository
-
-3. **Configure build settings:**
-   ```
-   Build command: npm run build
-   Publish directory: .next
-   ```
-
-4. **Add environment variables** (if using Stripe):
-   - Go to Site settings → Environment variables
-   - Add `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`
-
-5. **Deploy!** Netlify will automatically build and deploy your site
-
-### Other Platforms
-- **Vercel**: Automatic deployment for Next.js projects
-- **AWS Amplify**: Full-stack hosting with backend support
-- **Custom Server**: Use `npm run build && npm start`
 
 ## 🎨 Customization
 
@@ -213,6 +216,15 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 ```
 
+## 🔧 Environment Variables
+
+Create a `.env.local` file for local development:
+```
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key_here
+```
+
+For Netlify deployment, add these in Site settings → Environment variables.
+
 ## 🤝 Contributing
 
 This is a starter template. Feel free to:
@@ -232,10 +244,15 @@ This project is open source and available under the MIT License.
 - **Fonts**: Inter from Google Fonts
 - **Framework**: Next.js by Vercel
 
+## 📞 Support
+
+Need help? 
+- [Open an issue](https://github.com/Naveenkm07/E-commerce-Store-Small-Medium/issues)
+- Check the [deployment guide](./DEPLOYMENT.md)
+- Contact us through the website!
+
 ---
 
 **Built with ❤️ using Next.js, Tailwind CSS, and Framer Motion**
 
-Need help? [Open an issue](https://github.com/yourusername/ecommerce-site/issues) or contact us through the website!
-#   E - c o m m e r c e - S t o r e - S m a l l - M e d i u m  
- 
+**Ready for Netlify deployment 🚀**
