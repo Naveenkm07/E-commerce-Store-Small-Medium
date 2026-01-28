@@ -1,4 +1,4 @@
-# ShopHub - Modern E-commerce Website
+ ShopHub - Modern E-commerce Website
 
 A production-ready, modern e-commerce website built with Next.js 16+, Tailwind CSS, and Framer Motion. Perfect for small-to-medium businesses and D2C startups.
 
