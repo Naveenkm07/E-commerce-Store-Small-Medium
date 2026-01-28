@@ -1,0 +1,33 @@
+# Netlify Configuration for Next.js E-commerce Site
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"
+
+# Next.js plugin for Netlify (recommended for Next.js projects)
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Redirect rules for clean URLs and SPA routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Environment variables configuration
+# Add these in Netlify Dashboard: Site Settings → Environment variables
+# Required for production:
+# - STRIPE_SECRET_KEY (from Stripe Dashboard)
+# - STRIPE_PUBLIC_KEY (from Stripe Dashboard)  
+# - EMAIL_API_KEY (from SendGrid or Resend)
+# - BUSINESS_URL (your deployed site URL)
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
